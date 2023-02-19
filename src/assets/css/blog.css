@@ -41,7 +41,7 @@
 .blog-sub-heading{
     font-family: Roboto, sans-serif;
     font-size: 16px;
-    color: #fed51b;
+    /*color: #fed51b;*/
     margin-top: 30px;
     margin-bottom: 0px;
     display: inline-block;
@@ -456,6 +456,7 @@
 }
 .blog-content .main_content .detail_blog .blog_detail .blog-sub-heading{
     margin-top: 5px !important;
+  margin-bottom: 15px!important;
 }
 .blog-content .main_content .detail_blog .blog_detail h2{
     font-family: 'Oswald', sans-serif;

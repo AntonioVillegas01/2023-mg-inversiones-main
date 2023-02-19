@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { PartnersComponent } from './partners/partners.component';
 import { FooterComponent } from './footer/footer.component';
+import { DesarrolloComponent } from './desarrollo/desarrollo.component';
 
 
 
@@ -23,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     AboutComponent,
     ProjectsComponent,
     PartnersComponent,
-    FooterComponent
+    FooterComponent,
+    DesarrolloComponent
   ],
   imports: [
     CommonModule,
