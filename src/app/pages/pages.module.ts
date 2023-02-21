@@ -11,6 +11,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { PartnersComponent } from './partners/partners.component';
 import { FooterComponent } from './footer/footer.component';
 import { DesarrolloComponent } from './desarrollo/desarrollo.component';
+import { AlmavivaComponent } from './almaviva/almaviva.component';
+import { TerravivaComponent } from './terraviva/terraviva.component';
+import { DamComponent } from './dam/dam.component';
 
 
 
@@ -25,7 +28,10 @@ import { DesarrolloComponent } from './desarrollo/desarrollo.component';
     ProjectsComponent,
     PartnersComponent,
     FooterComponent,
-    DesarrolloComponent
+    DesarrolloComponent,
+    AlmavivaComponent,
+    TerravivaComponent,
+    DamComponent
   ],
   imports: [
     CommonModule,

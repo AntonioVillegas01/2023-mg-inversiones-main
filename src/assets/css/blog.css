@@ -134,7 +134,7 @@
     font-family: 'Roboto', sans-serif;
     background-color: rgba(225, 225, 225, 0.24);
     margin-bottom: 50px;
-    padding: 40px;
+    padding: 30px;
     color: #202020;
 }
 .blog-content h4{
@@ -154,7 +154,7 @@
     letter-spacing: 1px;
     position: relative;
     overflow: hidden;
-    font-size: 13px;
+    font-size: 15px;
     margin-bottom: 10px;
     text-overflow: ellipsis;
 }
