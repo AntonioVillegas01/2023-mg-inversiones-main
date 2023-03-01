@@ -22,10 +22,8 @@ const routes: Routes = [
       {path: '', redirectTo: 'inicio', pathMatch: 'full'},
       {path: 'inicio', component: HomeComponent, data: {title: 'Inicio'},},
       {path: 'acerca-de', component: AboutComponent, data: {title: 'Acerca de'},},
-      {path: 'desarrollos', component: ProjectsComponent, data: {title: 'Desarrollos'},},
-      {path: 'desarrollo/almaviva', component: AlmavivaComponent, data: {title: 'Desarrollo'},},
-      {path: 'desarrollo/terraviva', component: TerravivaComponent, data: {title: 'Desarrollo'},},
-      {path: 'desarrollo/dam', component: DamComponent, data: {title: 'Desarrollo '},},
+      {path: 'desarrollos/:id', component: ProjectsComponent, data: {title: 'Desarrollos'},},
+      {path: 'detalle/:id', component: DesarrolloComponent, data: {title: 'Desarrollo'},},
       {path: 'yucatan', component: AboutComponent, data: {title: 'Yucatán'},},
       {path: 'bio', component: ProjectsComponent, data: {title: 'Bio'},},
       {path: 'contacto', component: ContactComponent, data: {title: 'Contacto'},}
