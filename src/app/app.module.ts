@@ -20,7 +20,6 @@ import {SwiperModule} from "swiper/angular";
     AppRoutingModule,
     HttpClientModule,
     SwiperModule,
-
   ],
   providers: [],
   exports: [
