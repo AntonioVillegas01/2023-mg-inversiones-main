@@ -1,0 +1,31 @@
+<!--<swiper [effect]="'coverflow'" [grabCursor]="true" class="mySwiper">-->
+
+<!--  <ng-template *ngFor="let item of sliderItems"-->
+<!--               swiperSlide>-->
+<!--    <div class="card">-->
+<!--      <div class="card-header">-->
+<!--        <img [src]="item.imagen" alt="noIMange" class="img-fluid" >-->
+<!--        <p>{{item.titulo}}</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </ng-template>-->
+
+<!--</swiper>-->
+
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let slide of sliderItems">
+      <img src="{{ slide.imagen }}" alt="">
+      <div class="site-info-wrapper">
+        <h1>{{slide.titulo}}</h1>
+
+         <a class="btn anim-btn rounded-pill scroll"
+           routerLink='/desarrollo/{{slide.slug}}'    >Mas información
+           <span></span><span></span><span></span><span></span>
+         </a>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>

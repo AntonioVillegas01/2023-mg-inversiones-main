@@ -7,13 +7,14 @@ import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './header/header.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
-import { ProjectsComponent } from './projects/projects.component';
 import { PartnersComponent } from './partners/partners.component';
 import { FooterComponent } from './footer/footer.component';
 import { DesarrolloComponent } from './desarrollo/desarrollo.component';
 import { AlmavivaComponent } from './almaviva/almaviva.component';
 import { TerravivaComponent } from './terraviva/terraviva.component';
 import { DamComponent } from './dam/dam.component';
+import { DesarrollosComponent } from './desarrollos/desarrollos.component';
+import {AppModule} from "../app.module";
 
 
 
@@ -25,18 +26,19 @@ import { DamComponent } from './dam/dam.component';
     HeaderComponent,
     ContactComponent,
     AboutComponent,
-    ProjectsComponent,
     PartnersComponent,
     FooterComponent,
     DesarrolloComponent,
     AlmavivaComponent,
     TerravivaComponent,
-    DamComponent
+    DamComponent,
+    DesarrollosComponent
   ],
   imports: [
     CommonModule,
     RouterOutlet,
-    RouterLink
+    RouterLink,
+    AppModule
   ]
 })
 export class PagesModule { }

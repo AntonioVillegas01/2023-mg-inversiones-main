@@ -4,11 +4,11 @@ import {HomeComponent} from "./home/home.component";
 import {LayoutComponent} from "./layout/layout.component";
 import {ContactComponent} from "./contact/contact.component";
 import {AboutComponent} from "./about/about.component";
-import {ProjectsComponent} from "./projects/projects.component";
 import {DesarrolloComponent} from "./desarrollo/desarrollo.component";
 import {AlmavivaComponent} from "./almaviva/almaviva.component";
 import {TerravivaComponent} from "./terraviva/terraviva.component";
 import {DamComponent} from "./dam/dam.component";
+import {DesarrollosComponent} from "./desarrollos/desarrollos.component";
 
 
 
@@ -22,10 +22,10 @@ const routes: Routes = [
       {path: '', redirectTo: 'inicio', pathMatch: 'full'},
       {path: 'inicio', component: HomeComponent, data: {title: 'Inicio'},},
       {path: 'acerca-de', component: AboutComponent, data: {title: 'Acerca de'},},
-      {path: 'desarrollos/:id', component: ProjectsComponent, data: {title: 'Desarrollos'},},
-      {path: 'detalle/:id', component: DesarrolloComponent, data: {title: 'Desarrollo'},},
+      {path: 'desarrollos', component: DesarrollosComponent, data: {title: 'Desarrollos'},},
+      {path: 'desarrollo/:id', component: DesarrolloComponent, data: {title: 'Desarrollo Detalle'},},
       {path: 'yucatan', component: AboutComponent, data: {title: 'Yucatán'},},
-      {path: 'bio', component: ProjectsComponent, data: {title: 'Bio'},},
+      {path: 'bio', component: DesarrollosComponent, data: {title: 'Bio'},},
       {path: 'contacto', component: ContactComponent, data: {title: 'Contacto'},}
 
     ]
