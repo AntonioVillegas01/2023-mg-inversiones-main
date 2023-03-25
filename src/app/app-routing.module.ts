@@ -10,7 +10,7 @@ const routes: Routes = [
       import('../app/pages/pages.module').then((m) => m.PagesModule),
   },
 
-  {path: '**', component: NotFoundComponent},
+
 ];
 
 @NgModule({

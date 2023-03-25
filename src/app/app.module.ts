@@ -10,6 +10,7 @@ import {SwiperModule} from "swiper/angular";
 import {MarkdownModule, MarkedOptions, MarkedRenderer} from 'ngx-markdown';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { SafePipe } from './safe.pipe';
+import {CommonModule} from "@angular/common";
 
 
 
@@ -41,6 +42,7 @@ export function markedOptionsFactory(http: HttpClient): MarkedOptions {
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     HttpClientModule,
     SwiperModule,

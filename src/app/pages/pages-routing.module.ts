@@ -9,6 +9,7 @@ import {AlmavivaComponent} from "./almaviva/almaviva.component";
 import {TerravivaComponent} from "./terraviva/terraviva.component";
 import {DamComponent} from "./dam/dam.component";
 import {DesarrollosComponent} from "./desarrollos/desarrollos.component";
+import {NotFoundComponent} from "./not-found/not-found.component";
 
 
 
@@ -26,7 +27,12 @@ const routes: Routes = [
       {path: 'desarrollo/:id', component: DesarrolloComponent, data: {title: 'Desarrollo Detalle'},},
       {path: 'yucatan', component: AboutComponent, data: {title: 'Yucatán'},},
       {path: 'bio', component: DesarrollosComponent, data: {title: 'Bio'},},
-      {path: 'contacto', component: ContactComponent, data: {title: 'Contacto'},}
+      {path: 'contacto', component: ContactComponent, data: {title: 'Contacto'},},
+
+
+      {path: '404', component: NotFoundComponent},
+      {path: '**', redirectTo: '/404'}
+
 
     ]
   },
