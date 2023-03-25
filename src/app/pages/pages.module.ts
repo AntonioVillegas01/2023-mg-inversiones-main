@@ -15,6 +15,8 @@ import { TerravivaComponent } from './terraviva/terraviva.component';
 import { DamComponent } from './dam/dam.component';
 import { DesarrollosComponent } from './desarrollos/desarrollos.component';
 import {AppModule} from "../app.module";
+import {MarkdownModule} from "ngx-markdown";
+import {YouTubePlayerModule} from "@angular/youtube-player";
 
 
 
@@ -38,7 +40,9 @@ import {AppModule} from "../app.module";
     CommonModule,
     RouterOutlet,
     RouterLink,
-    AppModule
+    AppModule,
+    MarkdownModule,
+    YouTubePlayerModule
   ]
 })
 export class PagesModule { }

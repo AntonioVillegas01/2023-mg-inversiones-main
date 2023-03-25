@@ -58,6 +58,17 @@ export class DesarrollosComponent implements OnInit {
             titulo: item.attributes.titulo,
             imagen: item.attributes.portada.data.attributes.url,
             slug: item.attributes.slug,
+            brochure: item.attributes.brochure,
+            descripcion: item.attributes.descripcion,
+            youtubeLink: item.attributes.youtubeLink,
+            footerImg1: item.attributes.footerImg1,
+            footerImg2: item.attributes.footerImg2,
+            footerImg3: item.attributes.footerImg3,
+            serviciosPremium: item.attributes.serviciosPremium,
+            links: item.attributes.links,
+            keyPoint: item.attributes.keyPoint,
+            mapLink: item.attributes.mapLink,
+            textoFinal: item.attributes.textoFinal,
           }
         })
         // console.log(this.desarrollos)

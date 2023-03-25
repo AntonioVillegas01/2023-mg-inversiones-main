@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="col-12 col-lg-6" data-depth="0.1">
-        <img [src]="desarrollo.portada.data.attributes.url">
+        <img [src]="desarrollo.portada?.data?.attributes?.url">
       </div>
     </div>
   </div>
@@ -28,82 +28,34 @@
           <div class="main_content text-center text-lg-left">
             <div class="detail_blog">
               <div class="blog_detail">
-                <p class="blog-sub-heading text-center"><span></span>
-                  ⭐️ Servicios de primera calidad
-                </p>
-                <h2>🌿 SANTA CLARA ECOVILLAGE 🌿 </h2>
-                <!--                <span class="d-blog-text"><a href="#">JUNE 24, 2019</a> | BY <a href="#">MARK ANDERSON</a> | <a href="#">PHOTOGRAPHY</a>, <a href="#">MUSIC</a></span>-->
-                <p class="d-text">
-                  Exclusivo desarrollo de lotes Residenciales Premium de concepto vacacional a solo 2 minutos de la
-                  playa de Santa Clara en Yucatán, el único con más de 500 HA de ecoparque.
-                </p>
-                <!--                                                <p class="blog-sub-heading text-center"><span></span>Most flexible one page</p>-->
-                <!--                                                <h2>Post With A Preview Images</h2>-->
-
-                <h5>URBANIZACIÓN</h5>
-                <ul class="text-left">
-                  <li>Calles pavimentadas.</li>
-                  <li>Luz a pie de lote.</li>
-                  <li>Barda Perimetral.</li>
-                  <li>Acceso controlado (Seguridad 24/7).</li>
-                  <li>Drenaje pluvial.</li>
-                </ul>
-
-                <h5>URBANIZACIÓN</h5>
-                <ul class="text-left">
-                  <li>Calles pavimentadas.</li>
-                  <li>Luz a pie de lote.</li>
-                  <li>Barda Perimetral.</li>
-                  <li>Acceso controlado (Seguridad 24/7).</li>
-                  <li>Drenaje pluvial.</li>
-                </ul>
-
-                <iframe width="100%" height="449" src="https://www.youtube.com/embed/xACuS0RRcC8" title="Yucatan"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                <div style="margin-top: 10vh"></div>
-                <h5>URBANIZACIÓN</h5>
-                <ul class="text-left">
-                  <li>Calles pavimentadas.</li>
-                  <li>Luz a pie de lote.</li>
-                  <li>Barda Perimetral.</li>
-                  <li>Acceso controlado (Seguridad 24/7).</li>
-                  <li>Drenaje pluvial.</li>
-                </ul>
-
-                <h5>URBANIZACIÓN</h5>
-                <ul class="text-left">
-                  <li>Calles pavimentadas.</li>
-                  <li>Luz a pie de lote.</li>
-                  <li>Barda Perimetral.</li>
-                  <li>Acceso controlado (Seguridad 24/7).</li>
-                  <li>Drenaje pluvial.</li>
-                </ul>
-
-
-                <div class="row cube-sec no-gutters">
-                  <div class="col-12 col-md-6 pr-0 pr-md-2 pb-3">
-                    <img src="https://almaviva.mx/wp-content/uploads/2022/05/caban%CC%83a2.jpg" alt="image">
-                  </div>
-                  <div class="col-12 col-md-6 pl-0 pl-md-2 pb-3">
-                    <img src="https://almaviva.mx/wp-content/uploads/2022/05/caban%CC%83a2.jpg" alt="image">
-                  </div>
-                  <div class="col-12">
-                    <img src="https://almaviva.mx/wp-content/uploads/2022/05/caban%CC%83a2.jpg" alt="image">
-                  </div>
-                </div>
-
-                <p class="d-text">Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum
-                  sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
-                  <br/><br/>
-                  Maecenas sit amet purus eget ipsum elementum venenatis. Aenean maximus urna magna, quis rutrum mi
-                  semper non. Cras rhoncus elit non arcu hendrerit rhoncus. Pellentesque dignissim volutpat orci at
-                  interdum. In id ipsum volutpat.</p>
-
-
+                <p class="blog-sub-heading text-center"><span></span>{{desarrollo.keyPoint}}</p>
+                <markdown [data]="desarrollo.descripcion"></markdown>
               </div>
             </div>
+
+
+            <!--            <iframe width="100%" height="449" src="https://www.youtube.com/embed/{{desarrollo.youtubeLink}}" title="Yucatan"-->
+            <!--                    frameborder="0"-->
+            <!--                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"-->
+            <!--                    allowfullscreen></iframe>-->
+
+            <youtube-player [videoId]="desarrollo.youtubeLink"></youtube-player>
+
+            <div class="row cube-sec no-gutters">
+              <div class="col-12 col-md-6 pr-0 pr-md-2 pb-3">
+                <img [src]="desarrollo.footerImg1.data.attributes.url" alt="image">
+              </div>
+              <div class="col-12 col-md-6 pl-0 pl-md-2 pb-3">
+                <img [src]="desarrollo.footerImg2.data.attributes.url" alt="image">
+              </div>
+              <div class="col-12">
+                <img [src]="desarrollo.footerImg3.data.attributes.url" alt="image">
+              </div>
+            </div>
+            <br>
+            <br>
+            <markdown [data]="desarrollo.textoFinal"></markdown>
+
 
           </div>
 
@@ -114,7 +66,7 @@
               <div class="cat_sec">
                 <h4 class="text-center text-lg-left">Brochure</h4>
                 <div style="display: flex; text-align: center">
-                  <a href="/assets/pdf/santaClara.pdf" target="_blank">
+                  <a href="/assets/pdf/{{desarrollo.brochure}}.pdf" target="_blank">
                     <img src="assets/img/icons/archivo-pdf.png" alt="pdf" width="60">
                     <p style="margin-left: 5px">Descarga el Brochure técnico del proyecto</p>
                   </a>
@@ -125,48 +77,27 @@
               <div class="tags_sec">
                 <h4 class="text-center text-lg-left">Informacion legal</h4>
                 <div class="tags text-center text-lg-left">
-                  <a target="_blank"
-                    href="https://www.dropbox.com/sh/0lcyz284488ryfw/AADu1O3xRfi6Heq8NxnvX0T0a/ALMAVIVA/3.%20SANTA%20CLARA%20ECOVILLAGE/4.%20INFORMACI%C3%93N%20LEGAL/ARLUGI%2C%20S.A.%20DE%20C.V.?dl=0&subfolder_nav_tracking=1">
-                    <span class="rounded-pill">ARLUGI, S.A. DE C.V. ARLUGI, S.A. DE C.V.</span>
-                  </a>
-                  <a target="_blank"
-                    href="https://www.dropbox.com/sh/0lcyz284488ryfw/AAA-lRl2hxHigeAyEtgI4hvMa/ALMAVIVA/3.%20SANTA%20CLARA%20ECOVILLAGE/4.%20INFORMACI%C3%93N%20LEGAL/CONDOMINIO%20MAESTRO?dl=0&subfolder_nav_tracking=1">
-                    <span class="rounded-pill">CONDOMINIO MAESTRO</span>
-                  </a>
+
+
+                  <div *ngFor="let item of desarrollo.links">
+                    <a target="_blank"
+                       href="{{item.linkUrl}}">
+                      <span class="rounded-pill">{{item.titulo}}</span>
+                    </a>
+                  </div>
+
                 </div>
               </div>
               <div class="cat_sec">
                 <h4 class="text-center text-lg-left">Servicios Premium</h4>
                 <ul style="font-size: 80px; font-weight: bolder">
-                  <li>
-                    ⭐️ Servicio Concierge
+                  <li *ngFor="let item of desarrollo.serviciosPremium">
+                    ⭐️ {{item.nombreServicio}}
                   </li>
-                  <li>
-                    ⭐️ Acceso controlado
-                  </li>
-                  <li>
-                    ⭐️ Seguridad 24 / 7
-                  </li>
-                  <li>
-                    ⭐️ Servicio de Administración de la propiedad
-                  </li>
-                  <li>
-                    ⭐️ Transporte privado
-                  </li>
-                  <li>
-                    ⭐️ Enfermería
-                  </li>
-                  <li>
-                    ⭐️ Kids club y guarderia
-                  </li>
-                  <li>
-                    ⭐️ Agencia de escursiones y experiencia
-                  </li>
-
                 </ul>
               </div>
               <div class="advertisment">
-                <img src="img/blogs/advertisment.jpg" alt="image"/>
+                <img [src]="desarrollo.footerImg3.data.attributes.url" alt="image"/>
               </div>
             </div>
           </div>
@@ -179,9 +110,16 @@
 
 <div>
   <div style="width: 100%">
-    <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-            src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=es&amp;q=progreso+(Yucatan)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-      <a href="https://www.gps.ie/car-satnav-gps/">Car Navigation Systems</a></iframe>
+    <!--    <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"-->
+    <!--            [src]="sanitizeUrl(desarrollo.mapLink)"-->
+    <!--            >-->
+    <!--      </iframe>-->
+
+    <iframe
+      [src]='getMapLocation() | safe'
+      width="100%" height="300"
+      frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+      allowfullscreen webkitallowfullscreen mozallowfullscreen>
+    </iframe>
   </div>
 </div>
-
