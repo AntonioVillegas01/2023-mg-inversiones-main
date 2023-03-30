@@ -4,20 +4,30 @@
     <div class="row">
       <div class="col-12 col-lg-7">
         <h4 class="heading text-center text-lg-left">CONTACTAME</h4>
-        <form class="row contact-form wow fadeInLeft" id="contact-form-data">
+        <form class="row contact-form wow fadeInLeft" [formGroup]="form" method="post" (ngSubmit)="onSubmit()"
+              id="contact-form-data">
           <div class="col-sm-12" id="result"></div>
           <div class="col-12 col-md-5">
-            <input type="text" name="userName" placeholder="Your Name" class="form-control">
-            <input type="email" name="userEmail" placeholder="Email Address *" class="form-control">
-            <input type="text" name="userSubject" placeholder="Subject" class="form-control">
+            <input [formControl]="name" type="text" name="userName" placeholder="Nombre" class="form-control">
+            <input [formControl]="email" type="email" name="userEmail" placeholder="Correo Electrónico *"
+                   class="form-control">
+            <!--            <input  type="text" name="userSubject" placeholder="Subject" class="form-control"> -->
           </div>
           <div class="col-12 col-md-7">
-            <textarea class="form-control" name="userMessage" rows="6" placeholder="Your Message"></textarea>
+            <textarea [formControl]="message" class="form-control" name="userMessage" rows="6"
+                      placeholder="Mensaje"></textarea>
+            <input [formControl]="honeypot" class="hidden" type="text"/>
           </div>
+
           <div class="col-12">
-            <a href="javascript:void(0);" class="btn yellow-btn rounded-pill w-100 contact_btn"><i class="fa fa-spinner fa-spin mr-2 d-none" aria-hidden="true"></i> Send Message
+            <button [disabled]="isLoading" type="submit" class="btn yellow-btn rounded-pill w-100 contact_btn"><i
+              class="fa fa-spinner fa-spin mr-2 d-none" aria-hidden="true"></i> Enviar Mensaje
               <span></span><span></span><span></span><span></span><span></span>
-            </a>
+            </button>
+          </div>
+          <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
+            <br>
+            <span>{{responseMessage}}</span>
           </div>
         </form>
       </div>
@@ -28,7 +38,9 @@
             Ven a conocer nuestras oficinas ubicadas en:
           </p>
           <ul>
-            <li><i class="las la-map-marker addr"></i>World Trade Center, Montesito 38 Piso 21 oficina 23 y 24 , Col. Nápoles, alcaldía Benito Juarez, CDMX</li>
+            <li><i class="las la-map-marker addr"></i>World Trade Center, Montesito 38 Piso 21 oficina 23 y 24 , Col.
+              Nápoles, alcaldía Benito Juarez, CDMX
+            </li>
             <li><i class="las la-phone-volume phone"></i>
               <span>+52 55 35 15 71 77</span>
             </li>

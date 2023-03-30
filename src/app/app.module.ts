@@ -11,6 +11,8 @@ import {MarkdownModule, MarkedOptions, MarkedRenderer} from 'ngx-markdown';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { SafePipe } from './safe.pipe';
 import {CommonModule} from "@angular/common";
+import {ReactiveFormsModule} from "@angular/forms";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 
@@ -42,9 +44,12 @@ export function markedOptionsFactory(http: HttpClient): MarkedOptions {
   ],
   imports: [
     BrowserModule,
-    CommonModule,
-    AppRoutingModule,
+    ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    CommonModule,
+    HttpClientModule,
+    AppRoutingModule,
     SwiperModule,
     MarkdownModule.forRoot({ loader: HttpClient, sanitize: SecurityContext.NONE }),
     YouTubePlayerModule,

@@ -17,6 +17,7 @@ import { DesarrollosComponent } from './desarrollos/desarrollos.component';
 import {AppModule} from "../app.module";
 import {MarkdownModule} from "ngx-markdown";
 import {YouTubePlayerModule} from "@angular/youtube-player";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -36,13 +37,14 @@ import {YouTubePlayerModule} from "@angular/youtube-player";
     DamComponent,
     DesarrollosComponent
   ],
-  imports: [
-    CommonModule,
-    RouterOutlet,
-    RouterLink,
-    AppModule,
-    MarkdownModule,
-    YouTubePlayerModule
-  ]
+    imports: [
+        CommonModule,
+        RouterOutlet,
+        RouterLink,
+        AppModule,
+        MarkdownModule,
+        YouTubePlayerModule,
+        ReactiveFormsModule
+    ]
 })
 export class PagesModule { }
