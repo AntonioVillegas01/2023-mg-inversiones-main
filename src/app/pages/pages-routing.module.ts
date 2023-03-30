@@ -10,6 +10,8 @@ import {TerravivaComponent} from "./terraviva/terraviva.component";
 import {DamComponent} from "./dam/dam.component";
 import {DesarrollosComponent} from "./desarrollos/desarrollos.component";
 import {NotFoundComponent} from "./not-found/not-found.component";
+import {BioComponent} from "./bio/bio.component";
+import {YucatanComponent} from "./yucatan/yucatan.component";
 
 
 
@@ -25,8 +27,8 @@ const routes: Routes = [
       {path: 'acerca-de', component: AboutComponent, data: {title: 'Acerca de'},},
       {path: 'desarrollos', component: DesarrollosComponent, data: {title: 'Desarrollos'},},
       {path: 'desarrollo/:id', component: DesarrolloComponent, data: {title: 'Desarrollo Detalle'},},
-      {path: 'yucatan', component: AboutComponent, data: {title: 'Yucatán'},},
-      {path: 'bio', component: DesarrollosComponent, data: {title: 'Bio'},},
+      {path: 'yucatan', component: YucatanComponent, data: {title: 'Yucatán'},},
+      {path: 'bio', component: BioComponent, data: {title: 'Bio'},},
       {path: 'contacto', component: ContactComponent, data: {title: 'Contacto'},},
 
 

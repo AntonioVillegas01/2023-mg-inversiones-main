@@ -18,6 +18,8 @@ import {AppModule} from "../app.module";
 import {MarkdownModule} from "ngx-markdown";
 import {YouTubePlayerModule} from "@angular/youtube-player";
 import {ReactiveFormsModule} from "@angular/forms";
+import { BioComponent } from './bio/bio.component';
+import { YucatanComponent } from './yucatan/yucatan.component';
 
 
 
@@ -35,7 +37,9 @@ import {ReactiveFormsModule} from "@angular/forms";
     AlmavivaComponent,
     TerravivaComponent,
     DamComponent,
-    DesarrollosComponent
+    DesarrollosComponent,
+    BioComponent,
+    YucatanComponent
   ],
     imports: [
         CommonModule,
