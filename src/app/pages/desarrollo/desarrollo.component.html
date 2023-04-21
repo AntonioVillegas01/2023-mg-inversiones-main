@@ -33,25 +33,88 @@
               </div>
             </div>
 
-
-            <!--            <iframe width="100%" height="449" src="https://www.youtube.com/embed/{{desarrollo.youtubeLink}}" title="Yucatan"-->
-            <!--                    frameborder="0"-->
-            <!--                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"-->
-            <!--                    allowfullscreen></iframe>-->
-
             <youtube-player [videoId]="desarrollo.youtubeLink"></youtube-player>
 
             <div class="row cube-sec no-gutters">
-              <div class="col-12 col-md-6 pr-0 pr-md-2 pb-3">
-                <img [src]="desarrollo.footerImg1.data.attributes.url" alt="image">
-              </div>
-              <div class="col-12 col-md-6 pl-0 pl-md-2 pb-3">
-                <img [src]="desarrollo.footerImg2.data.attributes.url" alt="image">
-              </div>
+
               <div class="col-12">
-                <img [src]="desarrollo.footerImg3.data.attributes.url" alt="image">
+
+                <div id="js-grid-mosaic" class="cbp cbp-l-grid-mosaic" style="margin-bottom: 20vh; margin-top: 10%">
+
+                  <div class="cbp-item print logo development web mobile" style="min-height: 100%">
+                    <a
+                      [href]="desarrollo.footerImg1.data.attributes.url"
+                      class="cbp-caption cbp-lightbox" data-title="Yucatan">
+                      <div class="cbp-caption-defaultWrap">
+                        <img
+                          [src]="desarrollo.footerImg1.data.attributes.url"
+                          alt="img">
+                      </div>
+                      <div class="cbp-caption-activeWrap portfolio-hover-effect d-flex align-items-end">
+                        <div class="portfolio-inner-content">
+                          <span></span>
+                          <span></span>
+                        </div>
+                        <div class="hover-text">
+                          <h4 class="p-hover-title">{{desarrollo.titulo}}</h4>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="cbp-item print logo development web mobile" style="min-height: 100%">
+                    <a
+                      [href]="desarrollo.footerImg2.data.attributes.url"
+                      class="cbp-caption cbp-lightbox" data-title="Yucatan">
+                      <div class="cbp-caption-defaultWrap">
+                        <img
+                          [src]="desarrollo.footerImg2.data.attributes.url"
+                          alt="img">
+                      </div>
+                      <div class="cbp-caption-activeWrap portfolio-hover-effect d-flex align-items-end">
+                        <div class="portfolio-inner-content">
+                          <span></span>
+                          <span></span>
+                        </div>
+                        <div class="hover-text">
+                          <h4 class="p-hover-title">{{desarrollo.titulo}}</h4>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="cbp-item print logo development web mobile" style="min-height: 100%">
+                    <a
+                      [href]="desarrollo.footerImg3.data.attributes.url"
+                      class="cbp-caption cbp-lightbox" data-title="Yucatan">
+                      <div class="cbp-caption-defaultWrap">
+                        <img
+                          [src]="desarrollo.footerImg3.data.attributes.url"
+                          alt="img">
+                      </div>
+                      <div class="cbp-caption-activeWrap portfolio-hover-effect d-flex align-items-end">
+                        <div class="portfolio-inner-content">
+                          <span></span>
+                          <span></span>
+                        </div>
+                        <div class="hover-text">
+                          <h4 class="p-hover-title">{{desarrollo.titulo}}</h4>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+
+
+                </div>
               </div>
             </div>
+
+
+
+
+
+
             <br>
             <br>
             <markdown [data]="desarrollo.textoFinal"></markdown>
@@ -120,3 +183,9 @@
     </iframe>
   </div>
 </div>
+
+
+
+
+
+

@@ -3,6 +3,10 @@ import {DesarrollosService} from "../../services/desarrollos.service";
 import {ActivatedRoute} from "@angular/router";
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 
+
+
+// @ts-ignore
+declare function customInitFunctions();
 @Component({
   selector: 'app-desarrollo',
   templateUrl: './desarrollo.component.html',
@@ -17,6 +21,8 @@ export class DesarrolloComponent implements OnInit{
 
   public positionMap:any = {}
 
+  imgSrc: string | undefined;
+
 
 
   constructor(
@@ -26,10 +32,12 @@ export class DesarrolloComponent implements OnInit{
   ) {}
 
 
+
   ngOnInit() : void {
     this.id = this.route.snapshot.paramMap.get('id') || "";
     console.log(this.id);
     this.loadDesarrolloById();
+    customInitFunctions();
   }
 
   loadDesarrolloById(){
@@ -54,5 +62,11 @@ export class DesarrolloComponent implements OnInit{
   //   return this.sanitizer.bypassSecurityTrustUrl(url);
   // }
 
+  onClick(event: { target: any; srcElement: any; currentTarget: any; }){
+    const imgElem = event.target;
+    const target = event.target || event.srcElement || event.currentTarget;
+    const srcAttr = target.attributes.src;
+    this.imgSrc = srcAttr.nodeValue;
+  }
 
 }

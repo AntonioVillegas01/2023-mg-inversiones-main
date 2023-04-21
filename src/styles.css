@@ -1,3 +1,7 @@
 /*@import '~swiper/swiper-bundle.min.css';*/
 /*@import "~swiper/modules/effect-coverflow/effect-coverflow.min.css";*/
 
+
+.header-appear {
+  z-index: 5!important;
+}
